@@ -4,7 +4,8 @@
   "description": "OPdracht website maken voor gemeente",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "tailwind": "postcss tailwind/main.css -o public/css/tailwind.css --watch",
     "tailwind:build": "postcss tailwind/main.css -o public/css/tailwind.css --build"
   },
