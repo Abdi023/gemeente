@@ -1,0 +1,40 @@
+{
+    "name": "Wibautgroep",
+    "summary": "Multidisciplinaire projecten, programma’s en vraagstukken in het ruimtelijk en sociale domein en bedrijfsvoering vragen om ervaring en kennis op het hoogste niveau. Vanuit het Projectmanagementbureau biedt de Wibautgroep topadviseurs die op interim-basis de functie van manager, regisseur en project- of programmadirecteur vervullen.",
+    "imageCover": "image.jpg",
+    "wibautgroep": [
+      {
+          "description1": {
+              "wibautDescription": "Complexe, multidisciplinaire projecten, programma’s en vraagstukken in het ruimtelijk en sociale domein en bedrijfsvoering vragen om ervaring en kennis op het hoogste niveau."
+          },
+          "description2": {
+              "wibautDescription2": "Vanuit het Projectmanagementbureau biedt de Wibautgroep topadviseurs die op interim basis de functie van manager, regisseur en project- of programmadirecteur vervullen. Voorbeelden van opdrachten zijn Herziening Erfpachtstelsel en Aanpak Jeugdwerkeloosheid."
+          },
+          "alinea": {
+              "wibautAlinea": "Maak kennis met de leden van de Wibautgroep"
+          } 
+      }
+    ],
+    "personen": [
+          {
+              "persoon": [
+                "CV Jeroen van Straten",
+                "CV Sjouke Vrijburg",
+                "CV Vincent van Woerkom",
+                "CV Diana Duttenhofer",
+                "CV Max van Engen",
+                "CV Marc van Gemert"
+              ],
+              "persoonCV": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+              ]
+             
+          }
+      ]
+      
+}

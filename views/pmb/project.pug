@@ -1,0 +1,24 @@
+extends ../base
+
+//- Mixin voor de image met het link en heading
+mixin imageLink(src, alt, href, heading)
+    div(class='projecten__card')
+        img(class="projecten__img rounded-t-lg", src=src, alt=alt)
+        div(class="projecten__textBox p-4")
+            a(href=href)
+                h5(class='mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white')= heading
+
+
+block content
+    section(class="projecten p-[8rem]")
+        div(class="projecten__mixinBox gap-4")
+            h1(class="text-3xl font-[700]") Projecten
+            article(class="projecten__article")
+                +imageLink('/images/pmv/projecten/1.jpg', 'image 1', '/pmb/projecten/viewproject', "Nieuwbouw Spinoza20first")
+                +imageLink('/images/pmv/projecten/2.jpg', 'image 2', '/pmb/projecten/viewproject2', "Nieuwbouw AICS")
+                +imageLink('/images/pmv/projecten/3.jpg', 'image 3', '/pmb/projecten/viewproject3', "Renovatie Bostheater")
+                +imageLink('/images/pmv/projecten/4.jpg', 'image 4', '/pmb/projecten/viewproject4', "Renovatie de Wereldburger")
+                +imageLink('/images/pmv/projecten/5.png', 'image 5', '/pmb/projecten/viewproject5', "Kwartiermaker Nationaal Slavernijmuseum")
+                +imageLink('/images/pmv/projecten/6.jpg', 'image 6', '/pmb/projecten/viewproject6', "Renovatie Amsterdam Museum")
+                +imageLink('/images/pmv/projecten/7.jpg', 'image 7', '/pmb/projecten/viewproject7', "Sportpark Goed Genoeg & Clubgebouw AFC")
+                +imageLink('/images/pmv/projecten/8.png', 'image 8', '/pmb/projecten/viewproject8', "Verbouwing en Nieuwbouw Werven en Overslagpunten ")        

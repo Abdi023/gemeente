@@ -1,0 +1,59 @@
+extends base
+
+block content
+    section(class="p-4")
+        //- 
+        div(class="relative top-8 left-44") 
+            each pub in publicaties 
+                h3(class=" text-3xl font-bold")= pub.titel
+
+        //- 
+        ul(class="smartyUL flex flex-wrap justify-center gap-8 pt-16 ")
+
+            li(class="w-[40rem] min-h-[50rem] border-4 border-orange-600 rounded-xl shadow-lg")         
+                div(class="flex flex-col gap-6 pl-4 pr-4 pt-2 pb-2")
+                    each pub in publicaties
+                        each smarty, index in pub.smarty 
+                            h3(class=" text-xl")= smarty.alinea
+                            div(class="flex flex-col gap-4")
+                                each desc in smarty.description
+                                    p(class="")= desc
+
+
+            li(class="smartyList")
+                div(class="flex justify-center relative") 
+                    each pub in publicaties
+                        img(class="smartyImage" src=`/images/publicaties/${pub.imageCover}`, alt=`${pub.imageCover}`)
+                        each bgData in pub.bigData
+                            h3(class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white")= bgData.naam 
+
+        //- 
+        ul(class="flex flex-col justify-center gap-4")
+            div(class="relative left-20 top-12")
+                each pub in publicaties
+                    h4= pub.alineaPDF
+            //- 
+            each pub in publicaties
+                ul(class="flex justify-center items-center gap-16 flex-wrap p-16")
+                    each image, index in pub.images
+                        li(class="flex flex-col rounded-xl w-60 h-Pub_card_height cursor-pointer overflow-hidden shadow-lg")
+                            img(class="w-full h-80 object-cover rounded-t-xl" src=`/images/publicaties/${image}`, alt=`${image}`)
+                            div(class="p-2 pl-4 pr-4")
+                                h3(class="")= pub.pdfName[index]
+                                a(href=`/pdf/publicaties/${pub.pdf[index]}`, download=`${pub.pdf[index]}`)
+                                    button(type="button") Download PDF
+
+
+
+    
+
+
+
+
+
+
+            
+
+            
+                        
+

@@ -1,0 +1,49 @@
+---------- expertiseModel -----------
+wibautKaart:
+naam.
+summary.
+imageCover.
+product slug.
+
+---------- viewproduct bagina -----------
+wibautgroep:
+title.
+description2x.
+6x personen images.
+6x personen namen.
+6x personen CV's.
+
+
+
+
+---------- viewproduct bagina -----------
+Projectmanagement:
+naam summary.
+description.
+alinea 5x
+listen x
+
+
+
+Programmamanagement
+
+
+
+
+Procesmanagement
+
+
+
+
+Bouwmanagement
+
+
+
+
+
+Maatschappelijk vastgoed
+
+
+
+
+Planning en structurering

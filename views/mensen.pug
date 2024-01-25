@@ -1,0 +1,35 @@
+extends base
+
+
+block content 
+    section
+        article
+            img(class="relative w-full object-cover h-slider" src=`/images/mensen/mensen-657e4e1cd22d87786fd351a1-cover.webp`, alt=`image`)
+            a(class="bg-red-700 pt-2.5 pb-2.5 pl-10 pr-10 text-2xl text-cyan-50  relative bottom-28" href="") Project
+
+        div(class="flex justify-center items-center flex-col gap-2")
+            h1(class="text-2xl") Mensen
+            p(class="w-4/6") Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                |Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                |unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                |It has survived not only five centuries, but also the leap into electronic typesetting, 
+                |remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                |Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                |software like Aldus PageMaker including versions of Lorem Ipsum.
+
+        article(class="pt-20 pb-20 flex justify-center items-center") 
+            div(class="w-3/4 flex justify-center items-center flex-wrap gap-12")
+                each mens in mensen
+                    a(href=`/mensen/${mens.slug}`)
+                        article(class="w-60 h-56 cursor-pointer rounded overflow-hidden shadow-lg") 
+                            img(class="" src=`/images/mensen/${mens.imageCover}`, alt=`${mens.imageCover}`)
+                            div(class="pl-2 pt-2")
+                                h3(class="")= mens.summary
+
+
+        div(class="flex justify-center items-center flex-col ")
+            article(class="flex flex-col gap-4 justify-start pt-20 pb-10 pl-0 pr-0  w-3/6")
+                h1(class="text-xl") Meer Informatie
+                p(class="") Voor meer informatie over het inhuren van onze projectmanagers, 
+                    |bouwmanagers, planningsadviseurs of topadviseurs van de Wibautgroep 
+                    |kunt u contact opnemen met onze afdeling Markt en Capaciteit.

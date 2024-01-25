@@ -1,0 +1,42 @@
+extends base
+
+block content 
+    section 
+        article
+            img(class="relative w-full object-cover h-slider" src=`/images/mensen/mensen-657e4e1cd22d87786fd351a1-cover.webp`, alt=`image`)
+            a(class="bg-red-700 pt-2.5 pb-2.5 pl-10 pr-10 text-2xl text-cyan-50  relative bottom-28" href="") Project
+        
+        article(class="flex flex-col justify-center items-center")
+            div(class="flex flex-col justify-center items-center")
+                each project in projecten
+                    h2(class="text-center text-2xl")= project.titel
+
+                    //- gebruik het while loop
+                    ul
+                        -var desc = 0;
+                            while desc < project.description.length
+                                li= project.description[desc++]
+                    
+                    //- ul(class="flex flex-col gap-.5")
+                    //-     //- nieuwste versie for loop
+                    //-     - for (desc of project.description)
+                    //-         li= desc
+
+                        //- normaal versie van for loop
+                        //- - for(let desc = 0; desc < project.description.length; ++desc)
+                        //-     li= project.description[desc]
+                        
+
+                        //- oud versie van for loop 
+                        //- - for(let desc = 0; desc < project.description.length; ++desc) {
+                        //-     li= project.description[desc]
+                        //- -}
+
+
+        article(class="pt-20 pb-20 flex justify-center items-center") 
+            div(class="w-3/4 flex justify-center items-center flex-wrap gap-12")
+                each project in projecten
+                    article(class="w-60 h-56 cursor-pointer rounded overflow-hidden shadow-lg") 
+                        img(class="" src=`/images/projecten/${project.imageCover}`, alt=`${project.imageCover}`)
+                        div(class="pl-2 pt-2")
+                            h3(class="")= project.name

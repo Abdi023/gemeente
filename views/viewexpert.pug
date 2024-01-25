@@ -1,0 +1,37 @@
+extends base
+
+block content
+    section
+        article
+            img(class="relative w-full object-cover h-slider" src=`/images/expertise/${expert.imageCover}`, alt=`image`)
+            a(class="bg-red-700 pt-2.5 pb-2.5 pl-10 pr-10 text-2xl text-cyan-50  relative bottom-28" href="") Project
+        
+        div(class="flex justify-center items-center flex-col gap-2")
+            h1(class="text-2xl")= expert.name
+            if expert.wibautgroep && expert.wibautgroep.length > 0
+                each wibaut in expert.wibautgroep
+                    p(class="w-4/6")= wibaut.description1.wibautDescription
+                    p(class="w-4/6")= wibaut.description2.wibautDescription2
+
+        div(class="flex justify-center items-center pt-16 pb-4")
+            if expert.wibautgroep && expert.wibautgroep.length > 0
+                each wibaut in expert.wibautgroep
+                    h3(class="text-xl font-bold")= wibaut.alinea.wibautAlinea
+        
+        ul(class="flex justify-center items-center gap-16 flex-wrap p-16")
+            if expert.images && expert.images.length > 0
+                each image, index in expert.images
+                    li(class="flex flex-col rounded-xl w-ExpertCard shadow-lg ")
+                        img(class=" w-full h-full object-contain rounded-tl-xl rounded-tr-xl" src=`/images/expertise/${image}`, alt=`${image}`)
+
+                        div(class=" p-4	")
+                            h3()= expert.personen[0].persoon[index]
+                            p()= expert.personen[0].persoonCV[index]
+
+        div(class="")
+            h3() Wilt u weten wat een topadviseur van de Wibautgroep voor u kan betekenen?
+            p Neem contact op met onze afdeling Markt en Capaciteit.
+
+        div(class="")
+            h4() 
+                a(href="/pdf/Wibautgroep-ProjectManagement-Bureau.pdf" download="download") Deel deze pagina 

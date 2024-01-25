@@ -1,0 +1,13 @@
+@use "./components/slider.scss";
+@use "./components/publicatie.scss";
+
+// pmv
+@use "./components/pmb/index.scss";
+@use "./components/pmb/organisatie.scss";
+@use "./components/pmb/projecten.scss";
+@use "./components/pmb/werken.scss";
+
+// header
+@use "./components/header/header";
+@use "./components/header/mediaqueryHeader";
+
